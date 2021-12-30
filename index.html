@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./index.css">
+   <script src="./game.js" defer type="module"></script>   
+   <title>Snake Game</title>
+</head>
+<body>
+   <div class="app flex-center">
+      <div class="flex-center">
+         <div class="score-container">
+            <p class="score"></p>
+            <p class="highscore"></p>
+         </div>
+      </div>
+      <div class="flex-center">
+         <div class="game-board">
+         </div>
+      </div>
+      <div class="flex-center">
+         <div class="instructions">
+            <p class="how-to-play">
+               How to Play:
+            </p>
+            <ul>
+               <li>Use arrow keys to start moving</li>
+               <li>You can't collide with yourself or run off the grid</li>
+               <li>Eat watermelon, don't eat bomb.</li>
+               <li><span style="color: var(--blue);">Note</span>: Fast inputs are not supported :( You can only input as fast as the frame rate.</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+   
+</body>
+</html>

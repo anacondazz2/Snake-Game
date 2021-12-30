@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+
+:root {
+   --GRID-SIZE: 18;
+   --kvacpurp: rgb(216, 97, 255);
+   --dark: rgb(30, 35, 42);
+   --light: rgb(230, 230, 230);
+   --pink: rgb(255, 143, 161);
+   --blue: rgb(82, 200, 246);
+   --orange: #ff6a00;
+}
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Roboto Mono", monospace;
+}
+::selection {
+   background-color: black;
+   color: var(--orange);
+}
+
+/* REUSABLES */
+.flex-center {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.flex-col-center {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+body {
+   background-color: var(--dark);
+}
+
+.app {
+   height: 100vh;
+   display: grid;
+   grid-template-columns: 1fr 70vmin 1fr;
+   padding: 0 40px;
+}
+.game-board {
+   background-color: rgb(70, 71, 95);
+   width: 70vmin;
+   height: 70vmin;
+   display: grid;
+   grid-template-rows: repeat(var(--GRID-SIZE), 1fr);
+   grid-template-columns: repeat(var(--GRID-SIZE), 1fr);
+   border: 3px solid white;
+}
+.score-container {
+   margin-right: 20px;
+}
+.score-container p {
+   font-size: 20px;
+   font-weight: 600;
+}
+.score-container .score {
+   color: white;
+}
+.score-container .highscore {
+   color: var(--kvacpurp);
+}
+.instructions {
+   margin-left: 30px;
+   max-width: 300px;
+   font-weight: 500;
+   color: white;
+}
+.instructions .how-to-play {
+   font-weight: 700;
+   font-size: 22px;
+   margin-bottom: 5px;
+}
+.snake {
+   border-radius: 15px;
+   background-color: lime;
+   border: 0.25vmin solid black;
+}
+.food {
+   max-width: calc(70vmin / var(--GRID-SIZE));
+   max-height: calc(70vmin / var(--GRID-SIZE));
+   border: 0.25vmin dotted black;
+}
