@@ -20,7 +20,7 @@ let lastRenderTime = 0,
    secondsSinceLastRender;
 let gameOver = false;
 let score = 0;
-let highscore = window.localStorage.highscore;
+let highscore = window.localStorage.highscore ? window.localStorage.highscore : 0;
 
 const main = (currentTime) => {
    if (gameOver) {
@@ -30,7 +30,7 @@ const main = (currentTime) => {
             `You scored ${score} ${score == 1 ? "point" : "points"}!${score > highscore ? "\nYou beat your highscore! 👍" : ""} Press OK or F5 to restart.`
          )
       ) {
-         window.location = "/";
+         window.location.reload();
       }
       window.localStorage.setItem("highscore", Math.max(highscore, score));
       return;
