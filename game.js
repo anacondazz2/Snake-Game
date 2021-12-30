@@ -20,7 +20,7 @@ let lastRenderTime = 0,
    secondsSinceLastRender;
 let gameOver = false;
 let score = 0;
-let highscore = window.localStorage.highscore ? window.localStorage.highscore : 0;
+let highscore = window.localStorage.highscore > 0 ? window.localStorage.highscore : 0;
 
 const main = (currentTime) => {
    if (gameOver) {
