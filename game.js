@@ -16,11 +16,10 @@ import { onGrid } from "./grid.js";
 const gameBoard = document.querySelector(".game-board");
 const scoreElem = document.querySelector(".score");
 const highscoreElem = document.querySelector(".highscore");
-let lastRenderTime = 0,
-   secondsSinceLastRender;
+let lastRenderTime = 0, secondsSinceLastRender;
 let gameOver = false;
 let score = 0;
-let highscore = window.localStorage.highscore > 0 ? window.localStorage.highscore : 0;
+let highscore = localStorage.highscore > 0 ? localStorage.highscore : 0;
 
 const main = (currentTime) => {
    if (gameOver) {
@@ -32,7 +31,7 @@ const main = (currentTime) => {
       ) {
          window.location.reload();
       }
-      window.localStorage.setItem("highscore", Math.max(highscore, score));
+      localStorage.setItem("highscore", Math.max(highscore, score));
       return;
    }
    window.requestAnimationFrame(main);
